@@ -1,0 +1,341 @@
+{
+  "settings": {
+    "landing": "dashboard",
+    "browser_base_url": "://localhost",
+    "dev": true,
+    "logo": "static/images/lg_50.png",
+    "svg": {
+      "light": "static/images/lg_400_l.svg",
+      "dark": "static/images/lg_400.svg"
+    },
+    "keyfile": "/home/angeal/development",
+    "copyright_msg": "© {{year}} spartan cms",
+    "token": "b109f3bbbc244eb82441917ed06d618b9008dd09b3befd1b5e07394c706a8bb980b1d7785e5976ec049b46df5f1326af5a2ea6d103fd07c95385ffab0cacbc86"
+  },
+  "logs": {
+    "enabled": true,
+    "max": 1000
+  },
+  "vcheck": [
+    {
+      "name": "git",
+      "cmd": "git",
+      "ext": "--version"
+    },
+    {
+      "name": "node-js",
+      "cmd": "node",
+      "ext": "-v"
+    },
+    {
+      "name": "npm",
+      "cmd": "npm",
+      "ext": "-v"
+    },
+    {
+      "name": "openssl",
+      "cmd": "openssl",
+      "ext": "version"
+    },
+    {
+      "name": "cordova",
+      "cmd": "cordova",
+      "ext": "--version"
+    },
+    {
+      "name": "android",
+      "cmd": "adb",
+      "ext": "version"
+    },{
+      "name": "java",
+      "cmd": "javac",
+      "ext": "-version"
+    },
+    {
+      "name": "gradle",
+      "cmd": "gradle",
+      "ext": "--v"
+    }
+  ],
+  "vcheck_tpl": [
+    {
+      "name": "git"
+    },
+    {
+      "name": "node-js"
+    },
+    {
+      "name": "npm"
+    },
+    {
+      "name": "openssl"
+    },
+    {
+      "name": "cordova"
+    },
+    {
+      "name": "android"
+    },
+    {
+      "name": "java"
+    },
+    {
+      "name": "gradle"
+    }
+  ],
+  "install": {
+    "path": "/home/angeal/development/spartan",
+    "status": [
+      {
+        "title": "spartan_cms",
+        "installed": true,
+        "locked": false,
+        "current_version": null,
+        "installed_version": null,
+        "src": {
+          "base": "https://gitlab.com/angeal185/spartan-cms",
+          "pkg": "/raw/master/package.json"
+        },
+        "update": {
+          "available": false,
+          "last_check": null,
+          "interval": 86400000
+        },
+        "requires": ["node-js", "npm", "openssl"]
+      },
+      {
+        "title": "spartan_rest",
+        "installed": true,
+        "locked": false,
+        "current_version": "1.0.0",
+        "installed_version": "1.0.0",
+        "src": {
+          "base": "https://gitlab.com/angeal185/spartan-rest",
+          "pkg": "/raw/master/package.json"
+        },
+        "update": {
+          "available": false,
+          "last_check": 1580767805463,
+          "interval": 86400000
+        },
+        "requires": ["node-js", "npm"]
+      },
+      {
+        "title": "spartan_monitor",
+        "installed": true,
+        "locked": false,
+        "current_version": "1.0.0",
+        "installed_version": "1.0.0",
+        "src": {
+          "base": "https://gitlab.com/angeal185/spartan-monitor",
+          "pkg": "/raw/master/package.json"
+        },
+        "update": {
+          "available": false,
+          "last_check": 1580767805463,
+          "interval": 86400000
+        },
+        "requires": ["nodejs", "npm", "cordova", "android", "java", "gradle"]
+      },
+      {
+        "title": "spartan_store",
+        "installed": true,
+        "locked": false,
+        "current_version": "1.0.0",
+        "installed_version": "1.0.0",
+        "src": {
+          "base": "https://gitlab.com/angeal185/spartan-store",
+          "pkg": "/raw/master/package.json"
+        },
+        "update": {
+          "available": false,
+          "last_check": 1580767805463,
+          "interval": 86400000
+        },
+        "requires": ["nodejs", "npm", "cordova", "android", "java", "gradle"]
+      }
+    ]
+  },
+  "sb_nav": {
+    "side": "left",
+    "head": {
+      "title": "Spartan launcher"
+    },
+    "items": [
+      {
+        "title": "Dashboard",
+        "dest": "dashboard"
+      },
+      {
+        "title": "settings",
+        "dest": "settings"
+      },
+      {
+        "title": "safe",
+        "dest": "safe"
+      }
+    ]
+  },
+  "server_arr": [
+    {
+      "title": "Spartan CMS",
+      "sub": "Spartan CMS",
+      "server": "admin",
+      "port": "5000",
+      "requires": ["node-js", "npm", "openssl"]
+    },
+    {
+      "title": "Spartan Blog",
+      "sub": "Spartan blog website",
+      "server": "blog",
+      "port": "4000",
+      "requires": ["node-js", "git"]
+    },
+    {
+      "title": "Spartan Mobile",
+      "sub": "Spartan blog mobile app",
+      "server": "mobile",
+      "port": "6000",
+      "requires": ["node-js", "npm", "cordova", "android", "java", "gradle"]
+    },
+    {
+      "title": "Spartan Rest",
+      "sub": "Spartan rest api",
+      "server": "rest",
+      "port": "5500",
+      "requires": ["node-js", "npm"]
+    },
+    {
+      "title": "Spartan Monitor",
+      "sub": "Spartan monitor mobile app",
+      "server": "monitor",
+      "port": "3500",
+      "requires": ["node-js", "npm", "cordova", "android", "java", "gradle"]
+    }
+  ],
+  "cnf": {
+    "useContentSize": true,
+    "center": true,
+    "minWidth": 0,
+    "minHeight": 0,
+    "resizable": true,
+    "movable": true,
+    "minimizable": true,
+    "maximizable": true,
+    "closable": true,
+    "focusable": true,
+    "alwaysOnTop": false,
+    "fullscreen": false,
+    "fullscreenable": true,
+    "simpleFullscreen": false,
+    "skipTaskbar": false,
+    "kiosk": false,
+    "title": "spartan launcher",
+    "icon": "./app/static/images/lg_32.png",
+    "show": true,
+    "frame": false,
+    "parent": null,
+    "modal": false,
+    "acceptFirstMouse": false,
+    "disableAutoHideCursor": false,
+    "autoHideMenuBar": true,
+    "enableLargerThanScreen": false,
+    "backgroundColor": "#222",
+    "hasShadow": true,
+    "darkTheme": true,
+    "transparent": false,
+    "type": "default",
+    "titleBarStyle": "default",
+    "thickFrame": true,
+    "zoomToPageWidth": false,
+    "webPreferences": {
+      "devTools": true,
+      "nodeIntegration": true,
+      "nodeIntegrationInWorker": false,
+      "nodeIntegrationInSubFrames": false,
+      "preload": "",
+      "sandbox": false,
+      "enableRemoteModule": true,
+      "zoomFactor": 1,
+      "javascript": true,
+      "webSecurity": false,
+      "allowRunningInsecureContent": true,
+      "images": true,
+      "textAreasAreResizable": true,
+      "webgl": true,
+      "webaudio": true,
+      "plugins": false,
+      "experimentalFeatures": false,
+      "scrollBounce": true,
+      "defaultFontSize": 16,
+      "defaultMonospaceFontSize": 13,
+      "minimumFontSize": 0,
+      "defaultEncoding": "UTF-8",
+      "backgroundThrottling": true,
+      "offscreen": false,
+      "contextIsolation": false,
+      "nativeWindowOpen": false,
+      "webviewTag": false,
+      "safeDialogs": false,
+      "navigateOnDragDrop": false,
+      "autoplayPolicy": "no-user-gesture-required"
+    }
+  },
+  "app_cache": {
+    "admin": {
+      "enabled": false,
+      "pid": null
+    },
+    "blog": {
+      "enabled": false,
+      "pid": null
+    },
+    "mobile": {
+      "enabled": false,
+      "pid": null
+    },
+    "rest": {
+      "enabled": false,
+      "pid": null
+    },
+    "monitor": {
+      "enabled": false,
+      "pid": null
+    },
+    "css_monitor": {
+      "enabled": false,
+      "pid": null
+    }
+  },
+  "gzip": {
+    "level": 9,
+    "memLevel": 9,
+    "strategy": 0
+  },
+  "preprocessors": [
+    {
+      "title": "stylus",
+      "description": "",
+      "url": "stylus-lang.com",
+      "installed": true,
+      "version": "0.54.7",
+      "enabled": true
+    },
+    {
+      "title": "less",
+      "description": "",
+      "url": "lesscss.org",
+      "installed": false,
+      "version": null,
+      "enabled": false
+    },
+    {
+      "title": "sass",
+      "description": "",
+      "url": "sass-lang.com",
+      "installed": false,
+      "version": null,
+      "enabled": false
+    }
+  ]
+}

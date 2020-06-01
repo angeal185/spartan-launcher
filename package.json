@@ -1,0 +1,28 @@
+{
+  "name": "spartan-launcher",
+  "version": "1.0.0",
+  "description": "spartan cms desktop launcher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "build --linux snap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/angeal185/spartan-launcher.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "ben eaves",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^7.1.10",
+    "electron-builder": "^22.2.0"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "simple-git": "^1.131.0",
+    "tar": "^5.0.5"
+  }
+}
